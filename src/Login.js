@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Calculator from './Calculator.js';
-import AnimatedWrapper from "./AnimatedWrapper";
+import './Login.css';
 
-class Login extends Component {
+
+export default class Login extends Component {
   constructor(){
     super();
     this.state = {
@@ -72,5 +72,3 @@ class Login extends Component {
     );
   }
 }
-const LoginComp = AnimatedWrapper(Login);
-export default LoginComp;
