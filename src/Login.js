@@ -4,12 +4,14 @@ import './Login.css';
 
 
 export default class Login extends Component {
-  constructor(){
-    super();
-    this.state = {
-      result: "0",
+
+
+    calc(){
+        const val1= 1;
+        const val2= 3;
+        const value = val1 + val2;
+        return <div>{value}</div>;
     }
-  }
   changeResult(result){
     this.setState({result});
   }
@@ -25,7 +27,7 @@ export default class Login extends Component {
 
             <form class="login100-form validate-form" action='/startpage'>
               <span class="login100-form-title">
-                ORT&Lambda;L Login
+                ORT&Lambda;L Login {this.calc()}
               </span>
 
               <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
