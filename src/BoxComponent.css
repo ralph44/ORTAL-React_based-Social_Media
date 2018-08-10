@@ -3,8 +3,55 @@
     border-color: black;
     border-style: solid;
     background: #e6e6e6;
-    height: 100px;
+    height: 200px;
     width: 200px;
     margin: 10px;
     float: left;
+}
+
+.boxTitle{
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  height: 20px;
+  width: 120px;
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+}
+
+.boxDate{
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  height: 20px;
+  width: 50px;
+  margin-right: 10px;
+  margin-left: 140px;
+  margin-top: 10px;
+  float: none;
+}
+
+.boxImage{
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  height: 80px;
+  width: 180px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.boxDescription{
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  height: 60px;
+  width: 180px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
