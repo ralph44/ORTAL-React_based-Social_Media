@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Login from './Login.js';
+import Mainpage from './Mainpage.js';
+import Login from "./Login";
+import './Mainpage.css'
 
 
 
@@ -11,7 +13,7 @@ export default class App extends Component {
 
     return (
         <div>
-            <Login />
+            <Mainpage />
         </div>
 
 

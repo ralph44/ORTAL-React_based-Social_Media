@@ -1,69 +1,66 @@
 import React, { Component } from 'react';
 import './App.css';
 import './Login.css';
+import Mainpage from "./Mainpage";
 
 
 export default class Login extends Component {
-
-
     calc(){
         const val1= 1;
         const val2= 3;
         const value = val1 + val2;
         return <div>{value}</div>;
     }
-  changeResult(result){
-    this.setState({result});
-  }
   render() {
 
+
     return (
-      <div class="limiter">
-        <div class="container-login100">
-          <div class="wrap-login100">
-            <div class="login100-pic js-tilt" data-tilt>
+      <div className="limiter">
+        <div className="container-login100">
+          <div className="wrap-login100">
+            <div className="login100-pic js-tilt" data-tilt>
               <img src={window.location.origin + '/img/LogoSocialMedia.jpeg'} />
             </div>
 
-            <form class="login100-form validate-form" action='/startpage'>
-              <span class="login100-form-title">
+            <form className="login100-form validate-form" action='/startpage'>
+              <span className="login100-form-title">
                 ORT&Lambda;L Login {this.calc()}
               </span>
 
-              <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                <input class="input100" type="text" name="email" placeholder="Email"></input>
-                <span class="focus-input100"></span>
-                <span class="symbol-input100">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
+              <div className="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                <input className="input100" type="text" name="email" placeholder="Email"></input>
+                <span className="focus-input100"></span>
+                <span className="symbol-input100">
+                  <i className="fa fa-envelope" aria-hidden="true"></i>
                 </span>
               </div>
 
-              <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                <input class="input100" type="password" name="pass" placeholder="Password"></input>
-                <span class="focus-input100"></span>
-                <span class="symbol-input100">
-                  <i class="fa fa-lock" aria-hidden="true"></i>
+              <div className="wrap-input100 validate-input" data-validate = "Password is required">
+                <input className="input100" type="password" name="pass" placeholder="Password"></input>
+                <span className="focus-input100"></span>
+                <span className="symbol-input100">
+                  <i className="fa fa-lock" aria-hidden="true"></i>
                 </span>
               </div>
 
-              <div class="container-login100-form-btn">
-                <button class="login100-form-btn">
+              <div className="container-login100-form-btn">
+                <button className="login100-form-btn">
                   Login
                 </button>
               </div>
 
-              <div class="text-center p-t-12">
+              <div className="text-center p-t-12">
 
-                <a class="txt2" href="#">
+                <a className="txt2" href="#">
                   Username / Password vergessen?
                 </a>
               </div>
 
-              <div class="text-center p-t-136">
+              <div className="text-center p-t-136">
 
-                <a class="txt2" href="#">
+                <a className="txt2" href="#">
                   Neuen Account erstellen
-                  <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                  <i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                 </a>
               </div>
             </form>
