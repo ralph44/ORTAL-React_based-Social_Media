@@ -16,32 +16,32 @@ export default class Mainpage extends Component {
     render() {
         return (
 
-            <div className="box">
+            <div className="bigBox">
 
               <div className="bigBoxHeaderBar">
-                  <div className="boxTitle">
-                    <h6 className="boxTitleText">Das hier ist ja mal der geilste Titel überhaupt. Muss leider kurz sein.</h6>
+                  <div className="bigBoxTitle">
+                    <h6 className="bigBoxTitleText">Das hier ist ja mal der geilste Titel überhaupt. Muss leider kurz sein.</h6>
                   </div>
 
-                  <div className="boxDate">
-                    <h6 className="boxDateText">{this.currentDateMethod()}</h6>
+                  <div className="bigBoxDate">
+                    <h6 className="bigBoxDateText">{this.currentDateMethod()}</h6>
                   </div>
               </div>
 
 
               <div className="bigBoxCenterContent">
-                <div className="boxImage">
+                <div className="bigBoxImage">
                   <img src="TestImage.jpeg" alt="" />
                 </div>
               </div>
 
 
               <div className="bigBoxBottomContent">
-                <div className="boxDescription">
+                <div className="bigBoxDescription">
 
                 </div>
 
-                <div className="boxInfo">
+                <div className="bigBoxInfo">
 
                 </div>
               </div>

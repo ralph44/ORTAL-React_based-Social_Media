@@ -7,6 +7,7 @@ export default class Mainpage extends Component {
 
     render() {
         return (
+
             <div className="box">
 
               <div className="boxTitle">
@@ -26,6 +27,7 @@ export default class Mainpage extends Component {
               </div>
 
             </div>
+
         );
     }
 }

@@ -1,4 +1,4 @@
-.box {
+.bigBox {
     border-width: 2px;
     border-color: black;
     border-style: solid;
@@ -31,7 +31,7 @@
   width: 98%;
 }
 
-.boxTitle{
+.bigBoxTitle{
   border-width: 2px;
   border-color: black;
   border-style: solid;
@@ -44,14 +44,14 @@
   font-size: 3vh; /* this makes the font size scale with viewport*/
 }
 
-.boxTitleText{
+.bigBoxTitleText{
   text-align: left;
   font-size: 50%;
   text-decoration: none;
   padding: 2%;
 }
 
-.boxDate{
+.bigBoxDate{
   border-width: 2px;
   border-color: black;
   border-style: solid;
@@ -64,7 +64,7 @@
   font-size: 3vh; /* this makes the font size scale with viewport*/
 }
 
-.boxDateText{
+.bigBoxDateText{
   text-align: left;
   font-size: 70%;
   text-decoration: none;
@@ -80,7 +80,7 @@
   width: 98%;
 }
 
-.boxImage{
+.bigBoxImage{
   border-width: 1px;
   border-color: black;
   border-style: solid;
@@ -101,7 +101,7 @@
   display: flex;
 }
 
-.boxDescription{
+.bigBoxDescription{
   border-width: 1px;
   border-color: black;
   border-style: solid;
@@ -111,7 +111,7 @@
   width: 75%;
 }
 
-.boxInfo{
+.bigBoxInfo{
   border-width: 1px;
   border-color: black;
   border-style: solid;
