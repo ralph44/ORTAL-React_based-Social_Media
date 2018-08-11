@@ -1,0 +1,17 @@
+.buttonForInput {
+    background-color: #57b846;
+    border-radius: 15px;
+    width: 40px;
+    margin-left: 10px;
+}
+.inputForAlter {
+    width: 150px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 10px;
+
+}
+
+.divForAlterInput {
+    text-align: center;
+}

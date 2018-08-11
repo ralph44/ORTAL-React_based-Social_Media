@@ -5,3 +5,9 @@ body {
     background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
     background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
+.headerForWelcome {
+    text-align: center;
+    margin: 30px;
+    font-family: Roboto;
+    font-size: 30px;
+}
