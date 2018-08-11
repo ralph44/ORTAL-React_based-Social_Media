@@ -1,0 +1,122 @@
+.box {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    background: #e6e6e6;
+    padding: 0.5%;
+    /*margin-top: 2vh;
+    margin-left: 15vw;*/
+    margin: 2vh 15vw;
+    height: 80vw;
+    width: 70vw;
+    float: left;
+    max-width: 600px;
+    max-height: 600px;
+    /*
+      fix the scaling when decreasing viewport height by usign media query below.
+
+      Also, make the main css sheet adapt to phone screens, then scale up for desktops.
+      This will make page loading faster on mobile devices.
+    */
+}
+
+.bigBoxHeaderBar{
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+
+  display: flex;
+  margin: 2% 1%;
+  height: 10%;
+  width: 98%;
+}
+
+.boxTitle{
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  height: 90%;
+  width: 75%;
+  margin: 0.5%;
+  float: left;
+
+  font-size: 3vh; /* this makes the font size scale with viewport*/
+}
+
+.boxTitleText{
+  text-align: left;
+  font-size: 50%;
+  text-decoration: none;
+  padding: 2%;
+}
+
+.boxDate{
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  height: 90%;
+  width: 23%;
+  margin: 0.5%;
+  float: left;
+
+  font-size: 3vh; /* this makes the font size scale with viewport*/
+}
+
+.boxDateText{
+  text-align: left;
+  font-size: 70%;
+  text-decoration: none;
+  padding: 10% 15%;
+}
+
+.bigBoxCenterContent{
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  margin: 2% 1%;
+  height: 40%;
+  width: 98%;
+}
+
+.boxImage{
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  margin: 0.5%;
+  height: 96%;
+  width: 99%;
+}
+
+.bigBoxBottomContent{
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  margin: 2% 1%;
+  height: 42%;
+  width: 98%;
+
+  display: flex;
+}
+
+.boxDescription{
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  margin: 0.5%;
+  height: 96%;
+  width: 75%;
+}
+
+.boxInfo{
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  margin: 0.5%;
+  height: 96%;
+  width: 23%;
+}

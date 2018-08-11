@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Mainpage.css';
-import BoxComponent from './BoxComponent.js';
+import BoxComponent from './BigBoxComponent.js';
 
 
 
@@ -72,4 +72,3 @@ export default class Mainpage extends Component {
     );
   }
 }
-
