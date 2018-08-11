@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App/App.css';
 import './Login.css';
-import Mainpage from "./Mainpage";
+import Mainpage from "../Mainpage/Mainpage";
 
 
 export default class Login extends Component {

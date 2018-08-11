@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Mainpage from './Mainpage.js';
-import Login from "./Login";
-import './Mainpage.css'
+import Mainpage from '../Mainpage/Mainpage.js';
+import Login from "../Login/Login";
+import '../Mainpage/Mainpage.css'
 
 
 

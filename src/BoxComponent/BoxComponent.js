@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './BoxComponent.css'
-import BigBoxComponent from './BigBoxComponent';
+import BigBoxComponent from '../BigBoxComponent/BigBoxComponent';
 
 
 export default class Mainpage extends Component {

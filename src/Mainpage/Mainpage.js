@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Mainpage.css';
-import Navbar from './NavbarComponent.js';
-import BoxComponent from './BoxComponent.js';
-import BigBoxComponent from './BigBoxComponent.js';
+import Navbar from '../NavbarComponent/NavbarComponent.js';
+import BoxComponent from '../BoxComponent/BoxComponent.js';
+import BigBoxComponent from '../BigBoxComponent/BigBoxComponent.js';
 
 
 
