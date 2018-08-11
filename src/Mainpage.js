@@ -14,7 +14,6 @@ export default class Mainpage extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
-        this.handleEdit = this.handleEdit.bind(this);
     }
 
     handleChange(e) {
@@ -23,10 +22,6 @@ export default class Mainpage extends Component {
 
     handleSave() {
         this.setState({text: this.state.inputText, mode: 'view'});
-    }
-
-    handleEdit() {
-        this.setState({mode: 'edit'});
     }
 
     renderInputField() {
