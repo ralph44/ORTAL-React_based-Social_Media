@@ -1,0 +1,48 @@
+.navbarParent{
+  background: #2f2f2f;
+  height: 50px;
+  width: 100vw;
+
+  font-size: 25px;
+}
+
+.navbarElement-active{
+  width: 5%;
+  height: 60%;
+  margin: 0px 0.2%;
+  margin-right: 0.2%;
+  display: inline-flex;
+}
+
+.navbarElementText-active{
+  padding: 0% 3%;
+  color: white;
+  font-size: 120%;
+  text-decoration: none;
+  width:100%;
+  text-align:center;
+}
+
+.navbarElementText-active:hover{
+  color: rgb(33, 246, 221);
+}
+
+.navbarElement{
+  width: 6%;
+  height: 60%;
+  margin: 0px 0.2%;
+  display: inline-flex;
+}
+
+.navbarElementText{
+  padding: 0% 3%;
+  color: white;
+  font-size: 90%;
+  text-decoration: none;
+  width:100%;
+  text-align:center;
+}
+
+.navbarElementText:hover{
+  font-size: 120%;
+}

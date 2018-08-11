@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './Mainpage.css';
+import Navbar from './NavbarComponent.js';
+import BoxComponent from './BoxComponent.js';
 import BoxComponent from './BigBoxComponent.js';
+
 
 
 
@@ -56,16 +59,22 @@ export default class Mainpage extends Component {
         return button;
     }
 
+    renderNavbar() {
+        return <Navbar/>
+    };
+
   render() {
     return (
     <div>
+        {this.renderNavbar()}
+
         <header>
             <div>Welcome to ORTAL</div>
         </header>
         {this.renderInputField()}
 
         <div>
-        {this.renderBox()}
+          {this.renderBox()}
         </div>
 
     </div>
