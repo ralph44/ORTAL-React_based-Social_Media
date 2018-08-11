@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Mainpage.css';
 import Navbar from './NavbarComponent.js';
 import BoxComponent from './BoxComponent.js';
+import BoxComponent from './BigBoxComponent.js';
+
 
 
 

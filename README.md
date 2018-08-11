@@ -1,1 +1,1 @@
-Hier entsteht das wunderschöne Ortal Projekt meine Freunde. 
+Hier entsteht das wunderschöne Ortal/Timesquare Projekt meine Muchachos. 
