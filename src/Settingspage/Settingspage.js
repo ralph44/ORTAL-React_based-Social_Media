@@ -8,8 +8,7 @@ export default class Settingspage extends Component {
   render() {
     return (
     <div>
-        <Navbar/>
-        
+
         <header>
             <div className="headerForWelcome">Welcome to the Settings page</div>
         </header>

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import './NavbarComponent.css';
 
 
 
-export default class Mainpage extends Component {
+export default class NavbarComponent extends Component {
 
     render() {
         return (
@@ -14,19 +15,19 @@ export default class Mainpage extends Component {
               </div>
 
               <div className="navbarElement-active">
-                <a className="navbarElementText-active" href="#" >Home</a>
+                <Link to="/" className="navbarElementText-active">Home</Link>
               </div>
 
               <div className="navbarElement">
-                <a className="navbarElementText" href="#" >Profile</a>
+                <Link to="/profile" className="navbarElementText">Profile</Link>
               </div>
 
               <div className="navbarElement">
-                <a className="navbarElementText" href="#" >Settings</a>
+                <Link to="/settings" className="navbarElementText">Settings</Link>
               </div>
 
               <div className="navbarElement">
-                <a className="navbarElementText" href="#" >About</a>
+                <Link to="/about" className="navbarElementText">About</Link>
               </div>
 
               <div className="navbarElement-search">
