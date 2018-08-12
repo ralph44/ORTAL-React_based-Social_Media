@@ -29,6 +29,10 @@ export default class Mainpage extends Component {
                 <a className="navbarElementText" href="#" >About</a>
               </div>
 
+              <div className="navbarElement-search">
+                <input type="text" placeholder="Search.."></input>
+              </div>
+
             </div>
         );
     }

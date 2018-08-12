@@ -46,3 +46,26 @@
 .navbarElementText:hover{
   font-size: 120%;
 }
+
+.navbarElement-search{
+  width: 6%;
+  height: 100%;
+  margin: 0px 0.2%;
+  float: right;
+  padding: 0px;
+  border: none;
+  font-size: 17px;
+}
+
+.navbarElement-search input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.navbarElement-search input[type=text]:hover{
+  color: rgb(186, 35, 35);
+}
