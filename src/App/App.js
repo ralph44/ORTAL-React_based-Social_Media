@@ -19,13 +19,17 @@ export default class App extends Component {
     return (
         <BrowserRouter>
             <div>
-            <Route path="/" component={Mainpage} />
+              {/*der Tag 'exact' führt dazu, dass der link genau dem entsprechen
+               muss, was als path angegeben ist, damit das dazugehörige component
+               gerendert wird. Ansonten wird alles was '/' auch nur BEHINHALTET
+               ebenfalls gerendert.*/}
+            <Route exact path="/" component={Mainpage} />
             <Route path="/about" component={About}/>
             <Route path="/profile" component={Profile}/>
             <Route path="/settings" component={Settings}/>
             </div>
         </BrowserRouter>
-        
+
     );
   }
 }

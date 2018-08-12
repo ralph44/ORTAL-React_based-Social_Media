@@ -8,7 +8,7 @@ export default class Profilepage extends Component {
   render() {
     return (
     <div>
-
+        <Navbar/>
         <header>
             <div className="headerForWelcome">Welcome to your Profile page</div>
         </header>
