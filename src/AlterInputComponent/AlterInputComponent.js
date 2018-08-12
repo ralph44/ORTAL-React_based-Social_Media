@@ -51,9 +51,12 @@ export default class AlterInputComponent extends Component {
                     <button className="buttonForInput" onClick={this.handleSave}>Okay</button>
                 </div>
                 <br/>
-                <div>
-                    {this.renderBox()}
+                <div className="boxRenderPerimeterParent">
+                  <div className="boxRenderPerimeter">
+                      {this.renderBox()}
+                  </div>
                 </div>
+
 
             </div>
         );
