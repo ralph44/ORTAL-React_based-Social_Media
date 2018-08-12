@@ -3,7 +3,7 @@ import './Settingspage.css';
 import Navbar from '../NavbarComponent/NavbarComponent.js';
 
 
-export default class Mainpage extends Component {
+export default class Settingspage extends Component {
 
   render() {
     return (

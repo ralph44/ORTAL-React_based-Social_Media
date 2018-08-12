@@ -3,7 +3,7 @@ import './Profilepage.css';
 import Navbar from '../NavbarComponent/NavbarComponent.js';
 
 
-export default class Mainpage extends Component {
+export default class Profilepage extends Component {
 
   render() {
     return (
