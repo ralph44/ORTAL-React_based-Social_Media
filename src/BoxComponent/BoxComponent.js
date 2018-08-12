@@ -34,7 +34,7 @@ export default class Mainpage extends Component {
               </div>
 
               <div className="boxDate">
-                <h6>{Date()}</h6>
+                <h6>Datum</h6>
               </div>
 
               <div className="boxImage">
