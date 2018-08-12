@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import './Mainpage.css';
 import Navbar from '../NavbarComponent/NavbarComponent.js';
 import BoxComponent from '../BoxComponent/BoxComponent.js';
@@ -12,12 +13,15 @@ export default class Mainpage extends Component {
   render() {
     return (
     <div>
-        <Navbar/>
+        {/*<Navbar/>
         <header>
             <div className="headerForWelcome">Welcome to ORTAL</div>
         </header>
-        <AlterInputComponent/>
+        <AlterInputComponent/> */}
 
+        <Route path="/" component={Navbar} />
+
+        <Route path="/" exact component={AlterInputComponent} />
     </div>
     );
   }
