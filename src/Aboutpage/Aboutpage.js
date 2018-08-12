@@ -3,7 +3,7 @@ import './Aboutpage.css';
 import Navbar from '../NavbarComponent/NavbarComponent.js';
 
 
-export default class Mainpage extends Component {
+export default class Aboutpage extends Component {
 
   render() {
     return (
