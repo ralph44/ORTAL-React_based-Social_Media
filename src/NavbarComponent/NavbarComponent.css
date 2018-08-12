@@ -6,27 +6,6 @@
   font-size: 25px;
 }
 
-.navbarElement-active{
-  width: 5%;
-  height: 60%;
-  margin: 0px 0.2%;
-  margin-right: 0.2%;
-  display: inline-flex;
-}
-
-.navbarElementText-active{
-  padding: 0% 3%;
-  color: white;
-  font-size: 120%;
-  text-decoration: none;
-  width:100%;
-  text-align:center;
-}
-
-.navbarElementText-active:hover{
-  color: rgb(33, 246, 221);
-}
-
 .navbarElement{
   width: 6%;
   height: 60%;
@@ -35,9 +14,8 @@
 }
 
 .navbarElementText{
-  padding: 0% 3%;
   color: white;
-  font-size: 90%;
+  font-size: 120%;
   text-decoration: none;
   width:100%;
   text-align:center;
@@ -45,7 +23,29 @@
 
 .navbarElementText:hover{
   font-size: 120%;
+  color: rgb(33, 246, 221);
 }
+
+.logoNavBar{
+  width: 35%;
+  height: 100%;
+  margin-left: 40%;
+
+  -webkit-filter: brightness(250%);filter: brightness(250%);
+
+  -webkit-animation:spin 20s linear infinite;
+  -moz-animation:spin 20s linear infinite;
+  animation:spin 20s linear infinite;
+  }
+  @-moz-keyframes spin {
+    95% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin {
+    95% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin {
+    95% { -webkit-transform: rotate(0deg); transform:rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .navbarElement-search{
   width: 6%;
@@ -68,4 +68,10 @@
 
 .navbarElement-search input[type=text]:hover{
   color: rgb(186, 35, 35);
+}
+
+
+@keyframes logoAnimation {
+    from {background-color: red;}
+    to {background-color: yellow;}
 }

@@ -11,11 +11,12 @@ export default class NavbarComponent extends Component {
             <div className="navbarParent">
 
               <div className="navbarElement">
-                <img src={'/one.jpeg'} />
+                {/*}<img src={'./NavBarLogo/logo_noBG.png'} /> */}
+                <img className="logoNavBar" src={require('./NavBarLogo/logo_noBG.png')} />
               </div>
 
-              <div className="navbarElement-active">
-                <Link to="/" className="navbarElementText-active">Home</Link>
+              <div className="navbarElement">
+                <Link to="/" className="navbarElementText">Home</Link>
               </div>
 
               <div className="navbarElement">
@@ -23,7 +24,7 @@ export default class NavbarComponent extends Component {
               </div>
 
               <div className="navbarElement">
-                <Link to="/settings" className="navbarElementText">Settings</Link>
+                <Link to="/settings" className="navbarElementText">Options</Link>
               </div>
 
               <div className="navbarElement">
