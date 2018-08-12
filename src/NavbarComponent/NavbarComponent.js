@@ -4,7 +4,7 @@ import './NavbarComponent.css';
 
 
 
-export default class Mainpage extends Component {
+export default class NavbarComponent extends Component {
 
     render() {
         return (
