@@ -27,6 +27,7 @@ export default class Mainpage extends Component {
   render() {
     return (
     <div>
+        //Werde ich noch also eigenständige Component deklarieren, damit dies nicht immer angezeigt wird.
         <Navbar/>
         <header>
             <div className="headerForWelcome">Welcome to ORTAL</div>
