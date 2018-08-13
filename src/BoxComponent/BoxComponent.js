@@ -42,6 +42,8 @@ export default class BoxComponent extends Component {
               </div>
 
             </div>
+            </button>
+
             <Modal
                 open={open}
                 onClose={this.onCloseModal}
@@ -50,7 +52,6 @@ export default class BoxComponent extends Component {
             >
                 <BigBoxComponent/>
             </Modal>
-            </button>
           </div>
         );
     }
