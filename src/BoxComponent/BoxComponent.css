@@ -1,11 +1,15 @@
+.bigBoxContainer{
+  float: left;
+}
+
 .box {
     border-width: 1px;
     border-color: black;
     border-style: solid;
     background: #e6e6e6;
-    height: 200px;
-    width: 200px;
-    margin: 10px;
+    height: 100px;
+    width: 100px;
+    margin: 2px;
     float: left;
 }
 
@@ -14,11 +18,13 @@
   border-color: black;
   border-style: solid;
   background: #e6e6e6;
-  height: 20px;
-  width: 120px;
-  margin-left: 10px;
-  margin-top: 10px;
+  height: 10%;
+  width: 60%;
+  margin-left: 5%;
+  margin-top: 5%;
   float: left;
+
+  display: none;
 }
 
 .boxDate{
@@ -26,12 +32,14 @@
   border-color: black;
   border-style: solid;
   background: #e6e6e6;
-  height: 20px;
-  width: 50px;
-  margin-right: 10px;
-  margin-left: 140px;
-  margin-top: 10px;
+  height: 10%;
+  width: 25%;
+  margin-right: 5%;
+  margin-left: 70%;
+  margin-top: 5%;
   float: none;
+
+  display: none;
 }
 
 .boxImage{
@@ -39,10 +47,12 @@
   border-color: black;
   border-style: solid;
   background: #e6e6e6;
-  height: 80px;
-  width: 180px;
-  margin-left: 10px;
-  margin-top: 10px;
+  height: 40%;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+
+  display: none;
 }
 
 .boxDescription{
@@ -50,8 +60,10 @@
   border-color: black;
   border-style: solid;
   background: #e6e6e6;
-  height: 60px;
-  width: 180px;
-  margin-left: 10px;
-  margin-top: 10px;
+  height: 30%;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+
+  display: none;
 }

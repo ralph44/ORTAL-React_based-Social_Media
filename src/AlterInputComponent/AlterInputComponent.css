@@ -15,3 +15,18 @@
 .divForAlterInput {
     text-align: center;
 }
+
+.boxRenderPerimeterParent{
+  width: 80vw;
+  height: 70vh;
+  margin: 5vh 10vw;
+  border: 1px solid #aaa;
+  overflow: hidden;
+}
+
+.boxRenderPerimeter{
+  height: 100%;
+  margin-right: -50px; /* maximum width of scrollbar */
+  padding-right: 50px; /* maximum width of scrollbar */
+  overflow-y: scroll;
+}

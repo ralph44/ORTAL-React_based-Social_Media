@@ -26,6 +26,7 @@ export default class Mainpage extends Component {
 
     render() {
         return (
+          <div className="bigBoxContainer">
             <button onClick={this._onButtonClick}>
             <div className="box">
 
@@ -51,6 +52,7 @@ export default class Mainpage extends Component {
                     null
                 }
             </button>
+          </div>
         );
     }
 }
