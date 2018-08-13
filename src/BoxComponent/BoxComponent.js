@@ -1,33 +1,28 @@
 import React, { Component } from 'react';
 import './BoxComponent.css'
 import BigBoxComponent from '../BigBoxComponent/BigBoxComponent';
+import Modal from 'react-responsive-modal';
 
 
-export default class Mainpage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showComponent: false,
-        };
-        this._onButtonClick = this._onButtonClick.bind(this);
-    }
+export default class BoxComponent extends Component {
+    state = {
+        open: false,
+    };
 
-    _onButtonClick() {
-        if (this.state.showComponent == false){
-        this.setState({
-            showComponent: true,
-        });
-        } else {
-            this.setState({
-                showComponent: false,
-            });
-        }
-    }
+    onOpenModal = () => {
+        this.setState({ open: true });
+    };
+
+    onCloseModal = () => {
+        this.setState({ open: false });
+    };
+
 
     render() {
+        const {open} = this.state;
         return (
           <div className="bigBoxContainer">
-            <button onClick={this._onButtonClick}>
+            <button onClick={this.onOpenModal}>
             <div className="box">
 
               <div className="boxTitle">
@@ -47,10 +42,20 @@ export default class Mainpage extends Component {
               </div>
 
             </div>
-                {this.state.showComponent ?
-                    <BigBoxComponent /> :
-                    null
-                }
+            <Modal
+                open={open}
+                onClose={this.onCloseModal}
+                center
+                showCloseIcon={false}
+                classNames={{
+                    transitionEnter: 'transition-enter',
+                    transitionEnterActive: 'transition-enter-active',
+                    transitionExit: 'transition-exit-active',
+                    transitionExitActive: 'transition-exit-active',
+                }}
+            >
+                <BigBoxComponent/>
+            </Modal>
             </button>
           </div>
         );
