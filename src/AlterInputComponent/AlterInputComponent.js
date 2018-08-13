@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BoxComponent from '../BoxComponent/BoxComponent.js';
 import './AlterInputComponent.css';
+import InputValidation from "../InputValidationText/InputValidation.js";
 
 
 
@@ -8,7 +9,7 @@ import './AlterInputComponent.css';
 export default class AlterInputComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = {text: '', inputText: '', mode:'view'};
+        this.state = {text: '', inputText: '', valid:true};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
@@ -16,6 +17,12 @@ export default class AlterInputComponent extends Component {
 
     handleChange(e) {
         this.setState({ inputText: e.target.value });
+        var numberRegex = /^\d+$/;
+        if (numberRegex.test(e.target.value)){
+            this.setState({ valid: true });
+        } else {
+            this.setState({ valid: false});
+        }
     }
 
     handleSave() {
@@ -33,11 +40,10 @@ export default class AlterInputComponent extends Component {
                     <BoxComponent/>
                 )
             }
-        } else {
-
         }
         return button;
     }
+
 
     render() {
         return (
@@ -49,8 +55,9 @@ export default class AlterInputComponent extends Component {
                         value={this.state.inputText}
                     />
                     <button className="buttonForInput" onClick={this.handleSave}>Okay</button>
+                    <InputValidation name={this.state.valid}/>
                 </div>
-                <br/>
+
                 <div className="boxRenderPerimeterParent">
                   <div className="boxRenderPerimeter">
                       {this.renderBox()}

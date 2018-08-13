@@ -3,7 +3,6 @@ import { BrowserRouter , Route} from 'react-router-dom';
 
 import './App.css';
 import Mainpage from '../Mainpage/Mainpage.js';
-import Login from "../Login/Login";
 import About from '../Aboutpage/Aboutpage';
 import Profile from '../Profilepage/Profilepage';
 import '../Mainpage/Mainpage.css'
