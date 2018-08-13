@@ -26,7 +26,7 @@ export default class BoxComponent extends Component {
             <div className="box">
 
               <div className="boxTitle">
-                <h6 className="boxTitleProps">Ja Moin!</h6>
+                {this.props.value}
               </div>
 
               <div className="boxDate">
@@ -48,7 +48,7 @@ export default class BoxComponent extends Component {
                 center
                 showCloseIcon={false}
             >
-                <BigBoxComponent/>
+                <BigBoxComponent value={this.props.value}/>
             </Modal>
             </button>
           </div>

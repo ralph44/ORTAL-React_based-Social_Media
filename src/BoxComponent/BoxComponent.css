@@ -14,17 +14,10 @@
 }
 
 .boxTitle{
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  background: #e6e6e6;
-  height: 10%;
-  width: 60%;
-  margin-left: 5%;
-  margin-top: 5%;
+  text-align: center;
   float: left;
 
-  display: none;
+
 }
 
 .boxDate{

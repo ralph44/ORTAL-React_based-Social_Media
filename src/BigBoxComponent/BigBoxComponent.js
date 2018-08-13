@@ -17,7 +17,7 @@ export default class Mainpage extends Component {
         return (
 
             <div className="bigBox">
-
+                {this.props.value}
               <div className="bigBoxHeaderBar">
                   <div className="bigBoxTitle">
                     <h6 className="bigBoxTitleText">Das hier ist ja mal der geilste Titel überhaupt. Muss leider kurz sein.</h6>

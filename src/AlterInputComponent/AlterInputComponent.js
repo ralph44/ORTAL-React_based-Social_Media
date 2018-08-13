@@ -9,7 +9,7 @@ import InputValidation from "../InputValidationText/InputValidation.js";
 export default class AlterInputComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = {text: '', inputText: '', valid:true};
+        this.state = {text: '', inputText: '', valid:false};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
@@ -37,7 +37,7 @@ export default class AlterInputComponent extends Component {
             var i;
             for (i = 0; i < this.state.text; i++) {
                 button.push(
-                    <BoxComponent/>
+                    <BoxComponent value={i+1}/>
                 )
             }
         }
@@ -54,7 +54,7 @@ export default class AlterInputComponent extends Component {
                         onChange={this.handleChange}
                         value={this.state.inputText}
                     />
-                    <button className="buttonForInput" onClick={this.handleSave}>Okay</button>
+                    { this.state.valid ? <button className="buttonForInput" onClick={this.handleSave}>Okay</button> : null }
                     <InputValidation name={this.state.valid}/>
                 </div>
 
