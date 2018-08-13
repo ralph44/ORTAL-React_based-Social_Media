@@ -47,12 +47,6 @@ export default class BoxComponent extends Component {
                 onClose={this.onCloseModal}
                 center
                 showCloseIcon={false}
-                classNames={{
-                    transitionEnter: 'transition-enter',
-                    transitionEnterActive: 'transition-enter-active',
-                    transitionExit: 'transition-exit-active',
-                    transitionExitActive: 'transition-exit-active',
-                }}
             >
                 <BigBoxComponent/>
             </Modal>
