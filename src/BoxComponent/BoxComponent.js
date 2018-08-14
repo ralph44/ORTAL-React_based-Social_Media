@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import './BoxComponent.css'
 import BigBoxComponent from '../BigBoxComponent/BigBoxComponent';
 import Modal from 'react-responsive-modal';
 
 
-export default class BoxComponent extends Component {
+class BoxComponent extends Component {
     state = {
         open: false,
     };
@@ -17,30 +19,23 @@ export default class BoxComponent extends Component {
         this.setState({ open: false });
     };
 
+    getBoxStyleCss = function () {
+      if(this.props.value === this.props.userAge) {
+        return "boxToday"
+      } else if (this.props.value < this.props.userAge) {
+        return "boxOld"
+      } else return "boxFuture"
+    }
 
     render() {
         const {open} = this.state;
         return (
           <div className="bigBoxContainer">
             <button onClick={this.onOpenModal}>
-            <div className="box">
-
+            <div className={this.getBoxStyleCss()}>
               <div className="boxTitle">
                 {this.props.value}
               </div>
-
-              <div className="boxDate">
-                <h6>Datum</h6>
-              </div>
-
-              <div className="boxImage">
-
-              </div>
-
-              <div className="boxDescription">
-
-              </div>
-
             </div>
             </button>
 
@@ -56,3 +51,12 @@ export default class BoxComponent extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+  return {
+    userAge: state.user.age,
+    userExpectedAge: state.user.expectedAge
+  };
+};
+
+export default connect(mapStateToProps)(BoxComponent);
