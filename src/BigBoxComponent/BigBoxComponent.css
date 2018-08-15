@@ -1,8 +1,50 @@
-.bigBox {
+.bigBoxFuture {
     border-width: 2px;
     border-color: black;
     border-style: solid;
     background: #e6e6e6;
+    padding: 0.5%;
+    /*margin-top: 2vh;
+    margin-left: 15vw;*/
+    height: 80vw;
+    width: 70vw;
+    float: left;
+    max-width: 600px;
+    max-height: 600px;
+    /*
+      fix the scaling when decreasing viewport height by usign media query below.
+
+      Also, make the main css sheet adapt to phone screens, then scale up for desktops.
+      This will make page loading faster on mobile devices.
+    */
+}
+
+.bigBoxToday  {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    background: rgb(230, 203, 25);
+    padding: 0.5%;
+    /*margin-top: 2vh;
+    margin-left: 15vw;*/
+    height: 80vw;
+    width: 70vw;
+    float: left;
+    max-width: 600px;
+    max-height: 600px;
+    /*
+      fix the scaling when decreasing viewport height by usign media query below.
+
+      Also, make the main css sheet adapt to phone screens, then scale up for desktops.
+      This will make page loading faster on mobile devices.
+    */
+}
+
+.bigBoxPast {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    background: rgb(91, 91, 91);
     padding: 0.5%;
     /*margin-top: 2vh;
     margin-left: 15vw;*/

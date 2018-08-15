@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './BigBoxComponent.css';
 
 
 
-export default class Mainpage extends Component {
+class BigBoxComponent extends Component {
 
     currentDateMethod = function () {
       var today = new Date(),
@@ -13,14 +14,34 @@ export default class Mainpage extends Component {
       return currentDateString;
     }
 
+    getBoxParagraph = function () {
+      if(this.props.value <= this.props.userSquares.length - 1){
+        return this.props.userSquares[this.props.value - 1].text
+      } else return ""
+    }
+
+    getBoxTitle = function () {
+      if(this.props.value <= this.props.userSquares.length - 1){
+        return this.props.userSquares[this.props.value - 1].title
+      } else return ""
+    }
+
+    getBigBoxStyleCss = function () {
+      if(this.props.value === this.props.userAge) {
+        return "bigBoxToday"
+      } else if (this.props.value < this.props.userAge) {
+        return "bigBoxPast"
+      } else return "bigBoxFuture"
+    }
+
     render() {
         return (
 
-            <div className="bigBox">
+            <div className={this.getBigBoxStyleCss()}>
                 {this.props.value}
               <div className="bigBoxHeaderBar">
                   <div className="bigBoxTitle">
-                    <h6 className="bigBoxTitleText">Das hier ist ja mal der geilste Titel überhaupt. Muss leider kurz sein.</h6>
+                    <h6 className="bigBoxTitleText">{this.getBoxTitle()}</h6>
                   </div>
 
                   <div className="bigBoxDate">
@@ -38,7 +59,9 @@ export default class Mainpage extends Component {
 
               <div className="bigBoxBottomContent">
                 <div className="bigBoxDescription">
-
+                  <p>
+                    {this.getBoxParagraph()}
+                  </p>
                 </div>
 
                 <div className="bigBoxInfo">
@@ -52,3 +75,13 @@ export default class Mainpage extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+  return {
+    userAge: state.user.age,
+    userExpectedAge: state.user.expectedAge,
+    userSquares: state.user.squares
+  };
+};
+
+export default connect(mapStateToProps)(BigBoxComponent);

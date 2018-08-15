@@ -12,12 +12,12 @@ class UserComponent extends Component {
         <h3>{this.props.numSquares}</h3>
       )
     }
-    
+
 }
 
-cont mapStateToProps = state => {
+const mapStateToProps = state => {
   return {
-    numSquares: state.age
+    numSquares: state.user.age
   };
 };
 
