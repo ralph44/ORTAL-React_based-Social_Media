@@ -2,61 +2,43 @@
   float: left;
 }
 
-.box {
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    background: #e6e6e6;
-    height: 100px;
-    width: 100px;
-    margin: 2px;
-    float: left;
+.boxFuture {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6e6e6;
+  height: 100px;
+  width: 100px;
+  margin: 2px;
+  float: left;
 }
+
+.boxToday {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #e6d714;
+  height: 100px;
+  width: 100px;
+  margin: 2px;
+  float: left;
+}
+
+.boxOld {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background: #a7a7a7;
+  height: 100px;
+  width: 100px;
+  margin: 2px;
+  float: left;
+}
+
 
 .boxTitle{
   text-align: center;
   float: left;
 
 
-}
-
-.boxDate{
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  background: #e6e6e6;
-  height: 10%;
-  width: 25%;
-  margin-right: 5%;
-  margin-left: 70%;
-  margin-top: 5%;
-  float: none;
-
-  display: none;
-}
-
-.boxImage{
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  background: #e6e6e6;
-  height: 40%;
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 5%;
-
-  display: none;
-}
-
-.boxDescription{
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  background: #e6e6e6;
-  height: 30%;
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 5%;
-
-  display: none;
 }

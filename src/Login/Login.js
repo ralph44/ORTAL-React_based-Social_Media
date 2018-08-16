@@ -39,6 +39,40 @@ export default class Login extends Component {
         })
     };
 
+    state = {
+        redirect: false
+    };
+    setRedirect = (e) => {
+      e.preventDefault();
+        this.setState({
+            redirect: true
+        })
+    };
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/Mainpage' />
+        }
+    };
+    getUser = (e) => {
+        e.preventDefault();
+        const user = e.target.elements.username.value;
+        const password = e.target.elements.pw.value;
+        axios.get(`http://localhost:3001/user/${user}/${password}`).then((res) => {
+            const message = res.data.message;
+            if (message === 'hella'){
+                this.setState({
+                    redirect: true
+                });
+            } else {
+                console.log("Falsch");
+                this.setState({
+                    redirect: false
+                });
+            }
+        })
+    };
+
   render() {
 
 
@@ -94,6 +128,7 @@ export default class Login extends Component {
             </form>
           </div>
         </div>
+          {this.renderRedirect()}
       </div>
 
     );

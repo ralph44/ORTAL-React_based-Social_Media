@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class UserComponent extends Component {
     state = {
-      age: 2
+      age: 20
     }
 
 
@@ -12,12 +12,12 @@ class UserComponent extends Component {
         <h3>{this.props.numSquares}</h3>
       )
     }
-    
+
 }
 
-cont mapStateToProps = state => {
+const mapStateToProps = state => {
   return {
-    numSquares: state.age
+    numSquares: state.user.age
   };
 };
 
