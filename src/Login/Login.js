@@ -2,16 +2,42 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import '../App/App.css';
 import './Login.css';
-import Mainpage from "../Mainpage/Mainpage";
 import axios from 'axios';
 
-
 export default class Login extends Component {
-    constructor(props) {
-        super(props);
-    }
+    state = {
+        redirect: false
+    };
+    setRedirect = (e) => {
+      e.preventDefault();
+        this.setState({
+            redirect: true
+        })
+    };
 
-
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/Mainpage' />
+        }
+    };
+    getUser = (e) => {
+        e.preventDefault();
+        const user = e.target.elements.username.value;
+        const password = e.target.elements.pw.value;
+        axios.get(`http://localhost:3001/user/${user}/${password}`).then((res) => {
+            const message = res.data.message;
+            if (message === 'hella'){
+                this.setState({
+                    redirect: true
+                });
+            } else {
+                console.log("Falsch");
+                this.setState({
+                    redirect: false
+                });
+            }
+        })
+    };
 
   render() {
 
@@ -24,7 +50,7 @@ export default class Login extends Component {
               <img src={window.location.origin + '/img/LogoSocialMedia.jpeg'} />
             </div>
 
-            <form className="login100-form validate-form" onSubmit={this.props.valid}>
+            <form className="login100-form validate-form" onSubmit={this.getUser}>
               <span className="login100-form-title">
                 ORT&Lambda;L Login
               </span>
@@ -68,6 +94,7 @@ export default class Login extends Component {
             </form>
           </div>
         </div>
+          {this.renderRedirect()}
       </div>
 
     );
