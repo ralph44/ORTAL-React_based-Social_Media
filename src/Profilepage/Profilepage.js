@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Profilepage.css';
 import Navbar from '../NavbarComponent/NavbarComponent.js';
+import AlterInputComponent from "../AlterInputComponent/AlterInputComponent";
 
 
 export default class Profilepage extends Component {
@@ -12,6 +13,7 @@ export default class Profilepage extends Component {
         <header>
             <div className="headerForWelcome">Welcome to your Profile page</div>
         </header>
+        <AlterInputComponent/>
 
     </div>
     );
