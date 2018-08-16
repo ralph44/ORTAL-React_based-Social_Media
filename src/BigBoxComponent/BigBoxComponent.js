@@ -41,7 +41,9 @@ class BigBoxComponent extends Component {
                 {this.props.value}
               <div className="bigBoxHeaderBar">
                   <div className="bigBoxTitle">
-                    <h6 className="bigBoxTitleText">{this.getBoxTitle()}</h6>
+                    <textarea className="bigBoxTitleInput" rows="2" cols="58" maxlength="75">
+                      {this.getBoxTitle()}
+                    </textarea>
                   </div>
 
                   <div className="bigBoxDate">
@@ -59,9 +61,9 @@ class BigBoxComponent extends Component {
 
               <div className="bigBoxBottomContent">
                 <div className="bigBoxDescription">
-                  <p>
+                  <textarea className="bigBoxDescriptionInput" rows="14" cols="58">
                     {this.getBoxParagraph()}
-                  </p>
+                  </textarea>
                 </div>
 
                 <div className="bigBoxInfo">
