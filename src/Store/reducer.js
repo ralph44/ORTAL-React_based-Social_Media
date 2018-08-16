@@ -1,5 +1,6 @@
 const initialState = {
     user : {
+      login: false,
       age : 25,
       expectedAge : 80,
       name : "Lennard/t",

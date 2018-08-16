@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class UserComponent extends Component {
     state = {
-      age: 2
+      age: 20
     }
 
 

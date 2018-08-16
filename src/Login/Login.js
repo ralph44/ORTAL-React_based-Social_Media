@@ -1,16 +1,44 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router';
 import '../App/App.css';
 import './Login.css';
-import Mainpage from "../Mainpage/Mainpage";
-
+import axios from 'axios';
 
 export default class Login extends Component {
-    calc(){
-        const val1= 1;
-        const val2= 3;
-        const value = val1 + val2;
-        return <div>{value}</div>;
-    }
+    state = {
+        redirect: false
+    };
+    setRedirect = (e) => {
+      e.preventDefault();
+        this.setState({
+            redirect: true
+        })
+    };
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/Mainpage' />
+        }
+    };
+    getUser = (e) => {
+        e.preventDefault();
+        const user = e.target.elements.username.value;
+        const password = e.target.elements.pw.value;
+        axios.get(`http://localhost:3001/user/${user}/${password}`).then((res) => {
+            const message = res.data.message;
+            if (message === 'hella'){
+                this.setState({
+                    redirect: true
+                });
+            } else {
+                console.log("Falsch");
+                this.setState({
+                    redirect: false
+                });
+            }
+        })
+    };
+
   render() {
 
 
@@ -22,13 +50,13 @@ export default class Login extends Component {
               <img src={window.location.origin + '/img/LogoSocialMedia.jpeg'} />
             </div>
 
-            <form className="login100-form validate-form" action='/startpage'>
+            <form className="login100-form validate-form" onSubmit={this.getUser}>
               <span className="login100-form-title">
-                ORT&Lambda;L Login {this.calc()}
+                ORT&Lambda;L Login
               </span>
 
               <div className="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                <input className="input100" type="text" name="email" placeholder="Email"></input>
+                <input className="input100" type="text" name="username" placeholder="Email"></input>
                 <span className="focus-input100"></span>
                 <span className="symbol-input100">
                   <i className="fa fa-envelope" aria-hidden="true"></i>
@@ -36,7 +64,7 @@ export default class Login extends Component {
               </div>
 
               <div className="wrap-input100 validate-input" data-validate = "Password is required">
-                <input className="input100" type="password" name="pass" placeholder="Password"></input>
+                <input className="input100" type="password" name="pw" placeholder="Password"></input>
                 <span className="focus-input100"></span>
                 <span className="symbol-input100">
                   <i className="fa fa-lock" aria-hidden="true"></i>
@@ -44,7 +72,7 @@ export default class Login extends Component {
               </div>
 
               <div className="container-login100-form-btn">
-                <button className="login100-form-btn">
+                <button className="login100-form-btn" >
                   Login
                 </button>
               </div>
@@ -66,6 +94,7 @@ export default class Login extends Component {
             </form>
           </div>
         </div>
+          {this.renderRedirect()}
       </div>
 
     );
