@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './BigBoxComponent.css';
+import axios from 'axios';
+import {css} from "react-emotion";
+import {ClipLoader} from "react-spinners";
 
-
+const override = css`
+    display: none;
+    margin: 0 auto;
+    border-color: red;
+`;
 
 class BigBoxComponent extends Component {
+    constructor(props){
+        super();
+        this.state = {
+            isLoading: true,
+            boxTitle: ''
+        };
+    }
 
     currentDateMethod = function () {
       var today = new Date(),
@@ -18,13 +32,7 @@ class BigBoxComponent extends Component {
       if(this.props.value <= this.props.userSquares.length - 1){
         return this.props.userSquares[this.props.value - 1].text
       } else return ""
-    }
-
-    getBoxTitle = function () {
-      if(this.props.value <= this.props.userSquares.length - 1){
-        return this.props.userSquares[this.props.value - 1].title
-      } else return ""
-    }
+    };
 
     getBigBoxStyleCss = function () {
       if(this.props.value === this.props.userAge) {
@@ -32,17 +40,43 @@ class BigBoxComponent extends Component {
       } else if (this.props.value < this.props.userAge) {
         return "bigBoxPast"
       } else return "bigBoxFuture"
+    };
+
+    componentDidMount(){
+        this.getBoxTitle();
     }
 
-    render() {
-        return (
+    getBoxTitle = function () {
+        axios.get('http://gacrux.uberspace.de:61001/box/1').then((res) =>{
+            const message = res.data.message;
+            this.setState({
+                isLoading: false,
+                boxTitle: message
+            })
+        })
+    };
 
+    render() {
+        if (this.state.isLoading == true){
+            return (
+            <div className='sweet-loading'>
+                <ClipLoader
+                    className={override}
+                    sizeUnit={"px"}
+                    size={300}
+                    color={'#123abc'}
+                    loading={this.state.loading}
+                />
+            </div>);
+        }
+        return (
+        <div>
             <div className={this.getBigBoxStyleCss()}>
                 {this.props.value}
               <div className="bigBoxHeaderBar">
                   <div className="bigBoxTitle">
                     <textarea className="bigBoxTitleInput" rows="2" cols="58" maxlength="75">
-                      {this.getBoxTitle()}
+                        {"Das kommt von der API: " + this.state.boxTitle + " aka BoxTitle"}
                     </textarea>
                   </div>
 
@@ -62,7 +96,7 @@ class BigBoxComponent extends Component {
               <div className="bigBoxBottomContent">
                 <div className="bigBoxDescription">
                   <textarea className="bigBoxDescriptionInput" rows="14" cols="58">
-                    {this.getBoxParagraph()}
+                     {this.getBoxParagraph()}
                   </textarea>
                 </div>
 
@@ -70,10 +104,8 @@ class BigBoxComponent extends Component {
 
                 </div>
               </div>
-
-
             </div>
-
+        </div>
         );
     }
 }
