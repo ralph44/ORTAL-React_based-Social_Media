@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
+import { connect } from 'react-redux';
+
 import '../App/App.css';
 import './Login.css';
 import axios from 'axios';
 
-export default class Login extends Component {
-    state = {
-        redirect: false
-    };
-    setRedirect = (e) => {
-      e.preventDefault();
-        this.setState({
-            redirect: true
-        })
-    };
+class Login extends Component {
 
     renderRedirect = () => {
-        if (this.state.redirect) {
+        if (this.props.userAuthenticated === true) {
             return <Redirect to='/Mainpage' />
         }
     };
@@ -27,14 +20,9 @@ export default class Login extends Component {
         axios.get(`http://gacrux.uberspace.de:61001/user/${user}/${password}`).then((res) => {
             const message = res.data.message;
             if (message === 'hella'){
-                this.setState({
-                    redirect: true
-                });
+                this.props.onLoginSuccess();      {/*use this line to immutably set the authentication prop to true. replace the command just above it*/}
             } else {
-                console.log("Falsch");
-                this.setState({
-                    redirect: false
-                });
+                this.props.onLoginFail();
             }
         })
     };
@@ -100,3 +88,18 @@ export default class Login extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    userAuthenticated: state.user.authenticated,
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onLoginSuccess: () => dispatch({type: 'LOGINATTEMPT', success : true}),
+        onLoginFail: () => dispatch({type: 'LOGINATTEMPT', success : false})
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
