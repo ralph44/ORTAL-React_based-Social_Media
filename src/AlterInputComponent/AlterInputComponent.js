@@ -25,7 +25,7 @@ class AlterInputComponent extends Component {
             <div>
                 <div className="boxRenderPerimeterParent">
                   <div className="boxRenderPerimeter">
-                      {this.renderBoxes()}
+                    {this.renderBoxes()}
                   </div>
                 </div>
             </div>
