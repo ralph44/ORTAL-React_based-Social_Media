@@ -97,8 +97,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onLoginSuccess: () => dispatch({type: 'LOGINATTEMPT', success : true}),
-        onLoginFail: () => dispatch({type: 'LOGINATTEMPT', success : false})
+        onLoginSuccess: () => dispatch({type: 'LOGINATTEMPTSUCCESS'}),
+        onLoginFail: () => dispatch({type: 'LOGINATTEMPTFAIL'})
     }
 };
 

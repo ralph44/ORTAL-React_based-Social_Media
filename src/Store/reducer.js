@@ -24,19 +24,16 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'LOGINATTEMPT':
-            if (action.success === true) {
-                console.log("User logged in");
+        case 'LOGINATTEMPTSUCCESS':
                 return {
                     ...state,
                     user : {
+                        ...state.user,
                         authenticated : true,
                     }
                 }
-            } else {
-                console.log("Wrong Credentials, user not logged in")
-            };
-
+        case 'LOGINATTEMPTFAIL':
+            console.log("Wrong Credentials, user not logged in")
         case 'LOGOUTSUCCESS':
             console.log("Logging User Out");
             return {
@@ -47,9 +44,8 @@ const reducer = (state = initialState, action) => {
             }
         default:
             console.log("Unnamed action recieved");
-
+            return state;
         }
-    return state;
 };
 
 export default reducer;

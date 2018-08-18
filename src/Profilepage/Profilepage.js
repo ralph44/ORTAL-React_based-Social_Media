@@ -13,8 +13,6 @@ export default class Profilepage extends Component {
         <header>
             <div className="headerForWelcome">Welcome to your Profile page</div>
         </header>
-        <AlterInputComponent/>
-
     </div>
     );
   }
