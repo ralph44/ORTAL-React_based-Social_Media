@@ -32,9 +32,10 @@ const reducer = (state = initialState, action) => {
                         ...state.user,
                         authenticated : true,
                     }
-                }
+                };
         case 'LOGINATTEMPTFAIL':
-            console.log("Wrong Credentials, user not logged in")
+            console.log("Wrong Credentials, user not logged in");
+            return state;
         case 'LOGOUTSUCCESS':
             console.log("Logging User Out");
             return {
