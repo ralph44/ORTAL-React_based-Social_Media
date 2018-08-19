@@ -20,9 +20,16 @@ class BigBoxComponent extends Component {
         };
     }
 
-    currentDateMethod = function () {
-      var today = new Date(),
-      date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+    currentDateMethod = function (zone) {
+      var today = new Date();
+      var date = new Date();
+      if(zone === "eur") {
+          date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+      } else if(zone === "usa") {
+          date = (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear();
+      } else {
+          date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+      }
 
       var currentDateString = date;
       return currentDateString;
@@ -81,7 +88,7 @@ class BigBoxComponent extends Component {
                   </div>
 
                   <div className="bigBoxDate">
-                    <h6 className="bigBoxDateText">{this.currentDateMethod()}</h6>
+                    <h6 className="bigBoxDateText">{this.currentDateMethod("eur")}</h6>
                   </div>
               </div>
 

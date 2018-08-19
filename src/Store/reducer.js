@@ -2,7 +2,8 @@ const initialState = {
     user : {
       id : 1,
       authenticated : false,
-      age : 25,
+      age : 251,
+      birthday : new Date(1990, 10, 20),
       expectedAge : 80,
       name : "Lennard",
       squares : [
@@ -39,6 +40,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 user : {
+                    ...state.user,
                     authenticated : false
                 }
             }

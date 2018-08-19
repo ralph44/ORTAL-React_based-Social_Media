@@ -17,10 +17,11 @@
 }
 
 .boxRenderPerimeterParent{
-  width: 80vw;
+  width: 60vw;
   height: 70vh;
-  margin: 5vh 10vw;
+  margin: 2vh 20vw;
   border: 1px solid #aaa;
+  display: inline-block;
   overflow: hidden;
 }
 
@@ -29,4 +30,24 @@
   margin-right: -50px; /* maximum width of scrollbar */
   padding-right: 50px; /* maximum width of scrollbar */
   overflow-y: scroll;
+}
+
+.squaresScaleButtons {
+  display: inline-block;
+  width: 100vw;
+  height: 3vh;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.squaresScaleButtons button {
+    background-color: rgba(252, 255, 253, 0); /* Green background */
+    border: 2px solid white; /* Green border */
+    color: white; /* White text */
+    padding: 1vh 2vw; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+}
+
+.squaresScaleButtons button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
 }
