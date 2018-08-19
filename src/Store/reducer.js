@@ -1,9 +1,10 @@
 const initialState = {
     user : {
-      login: false,
+      id : 1,
+      authenticated : false,
       age : 25,
       expectedAge : 80,
-      name : "Lennard/t",
+      name : "Lennard",
       squares : [
         {title: "Title 1", text: "Text."},
         {title: "Title 2", text: "Text 2."},
@@ -22,7 +23,29 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-    return state;
+    switch (action.type) {
+        case 'LOGINATTEMPTSUCCESS':
+                return {
+                    ...state,
+                    user : {
+                        ...state.user,
+                        authenticated : true,
+                    }
+                }
+        case 'LOGINATTEMPTFAIL':
+            console.log("Wrong Credentials, user not logged in")
+        case 'LOGOUTSUCCESS':
+            console.log("Logging User Out");
+            return {
+                ...state,
+                user : {
+                    authenticated : false
+                }
+            }
+        default:
+            console.log("Unnamed action recieved");
+            return state;
+        }
 };
 
 export default reducer;
