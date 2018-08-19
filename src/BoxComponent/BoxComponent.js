@@ -9,6 +9,8 @@ import Modal from 'react-responsive-modal';
 class BoxComponent extends Component {
     state = {
         open: false,
+        height: this.props.height,
+        width: this.props.width
     };
 
     onOpenModal = () => {
@@ -25,7 +27,7 @@ class BoxComponent extends Component {
       } else if (this.props.value < this.props.userAge) {
         return "boxOld"
       } else return "boxFuture"
-    }
+    };
 
     render() {
         const {open} = this.state;

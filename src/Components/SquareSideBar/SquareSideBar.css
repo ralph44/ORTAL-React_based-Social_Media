@@ -1,0 +1,7 @@
+.squareSideBarPerimeter {
+    width: 15vw;
+    height: 70vh;
+    margin: 2vh 5vw;
+    border: 1px solid white;
+    display: inline-block;
+}

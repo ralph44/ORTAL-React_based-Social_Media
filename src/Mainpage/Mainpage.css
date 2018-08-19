@@ -7,7 +7,21 @@ body {
 }
 .headerForWelcome {
     text-align: center;
-    margin: 30px;
+    margin: 20px;
     font-family: Roboto;
     font-size: 30px;
+}
+
+.mainPageMainContent {
+    display: block;
+    width: 100vw;
+    height: 75vh;
+}
+
+.SquareSideBarParent {
+    display: inline-block;
+}
+
+.AlterInputComponentParent {
+    display: inline-block;
 }
