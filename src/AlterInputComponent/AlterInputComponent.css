@@ -17,9 +17,9 @@
 }
 
 .boxRenderPerimeterParent{
-  width: 60vw;
+  width: 40vw;
   height: 70vh;
-  margin: 2vh 20vw;
+  margin: 2vh 5vw;
   border: 1px solid #aaa;
   display: inline-block;
   overflow: hidden;
@@ -33,8 +33,8 @@
 }
 
 .squaresScaleButtons {
-  display: inline-block;
-  width: 100vw;
+  display:block;
+  width: 20vw;
   height: 3vh;
   text-align: center;
   margin: 10px auto;

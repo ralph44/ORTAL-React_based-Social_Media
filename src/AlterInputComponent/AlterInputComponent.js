@@ -49,7 +49,7 @@ class AlterInputComponent extends Component {
     render() {
         return (
             <div>
-                <div class="squaresScaleButtons">
+                <div className="squaresScaleButtons">
                   <button onClick={() => {this.changeTimeScale("days")}} >Days</button>
                   <button onClick={() => {this.changeTimeScale("weeks")}} >Weeks</button>
                   <button onClick={() => {this.changeTimeScale("months")}} >Months</button>

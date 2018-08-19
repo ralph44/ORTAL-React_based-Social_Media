@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import './Mainpage.css';
 import Navbar from '../NavbarComponent/NavbarComponent.js';
 import AlterInputComponent from '../AlterInputComponent/AlterInputComponent';
+import SquareSideBar from '../Components/SquareSideBar/SquareSideBar.js'
 
 
 
@@ -32,7 +33,14 @@ export default class Mainpage extends Component {
         <header>
             <div className="headerForWelcome">Welcome to ORTAL</div>
         </header>
-        <AlterInputComponent/>
+        <div className="mainPageMainContent">
+            <div className="SquareSideBarParent">
+                <SquareSideBar/>
+            </div>
+            <div className="AlterInputComponentParent">
+                <AlterInputComponent/>
+            </div>
+        </div>
     </div>
     );
   }
