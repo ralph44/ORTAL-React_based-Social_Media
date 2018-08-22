@@ -12,6 +12,7 @@ class AlterInputComponent extends Component {
 
     state = {
         timeScale : "months",
+        squares : []
     };
 
     changeTimeScale(newTimeScale) {
@@ -28,15 +29,14 @@ class AlterInputComponent extends Component {
         return daysToCelebDayDifference;
     }
 
-    renderBoxes() {
-        let squares = [];
-        let numberOfSquares = this.celebrationDate(this.props.userBirthday);
-        for (var i = 0; i < numberOfSquares; i++) {
-            squares.push(
+    renderBoxes(numberOfSquaresToRender) {
+        this.state.squares = [];
+        for (var i = 0; i < numberOfSquaresToRender; i++) {
+            this.state.squares.push(
                 <BoxComponent value={i+1}/>
             )
         }
-        return squares;
+        return this.state.squares;
     }
 
     daysBetweenDates = function(newDate, oldDate) {
@@ -65,7 +65,7 @@ class AlterInputComponent extends Component {
 
                 <div className="boxRenderPerimeterParent">
                   <div className="boxRenderPerimeter">
-                    {this.renderBoxes()}
+                    {this.renderBoxes(this.celebrationDate(this.props.userBirthday))}
                   </div>
                 </div>
             </div>
