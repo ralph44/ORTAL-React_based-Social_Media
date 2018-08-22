@@ -20,9 +20,17 @@ class AlterInputComponent extends Component {
         }
     }
 
+    celebrationDate(birthday) {
+        let celebDate = new Date(birthday);
+        let celebDateFinal = new Date(celebDate.setFullYear(celebDate.getFullYear() + this.props.userExpectedAge));
+        let daysToCelebDayDifference = this.daysBetweenDates(celebDateFinal, birthday)
+        console.log(daysToCelebDayDifference);
+        return daysToCelebDayDifference;
+    }
+
     renderBoxes() {
         let squares = [];
-        let numberOfSquares = this.squaresToRender();
+        let numberOfSquares = this.celebrationDate(this.props.userBirthday);
         for (var i = 0; i < numberOfSquares; i++) {
             squares.push(
                 <BoxComponent value={i+1}/>
@@ -31,9 +39,9 @@ class AlterInputComponent extends Component {
         return squares;
     }
 
-    squaresToRender = function() {
-        let dt2 = new Date();
-        let dt1 = new Date(this.props.userBirthday);
+    daysBetweenDates = function(newDate, oldDate) {
+        let dt2 = new Date(newDate);
+        let dt1 = new Date(oldDate);
 
         if (this.state.timeScale === "days") {
             return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
