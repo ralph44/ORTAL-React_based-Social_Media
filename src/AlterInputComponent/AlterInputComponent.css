@@ -33,8 +33,7 @@
 }
 
 .squaresScaleButtons {
-  display:block;
-  width: 20vw;
+  width: 30vw;
   height: 3vh;
   text-align: center;
   margin: 10px auto;
@@ -46,6 +45,7 @@
     color: white; /* White text */
     padding: 1vh 2vw; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
+    display: inline-block;
 }
 
 .squaresScaleButtons button:not(:last-child) {

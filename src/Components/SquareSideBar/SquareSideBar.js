@@ -4,10 +4,25 @@ import './SquareSideBar.css';
 
 class SquareSideBar extends Component {
 
+    state = {
+        squareTopicList : []
+    }
+
+    getUserTopics() {
+        for (var i = 0; i < 3; i++) {
+            this.state.squareTopicList.push(
+                <button class="button sideBarButton">{this.props.userTopics[i].name}</button>
+            )
+        };
+        return this.state.squareTopicList;
+    }
+
     render() {
         return(
             <div class="squareSideBarPerimeter">
-
+                <div className="squareSideBarTopics">
+                    {this.getUserTopics()}
+                </div>
             </div>
         );
     }
@@ -16,7 +31,8 @@ class SquareSideBar extends Component {
 
 const mapStateToProps = state => {
   return {
-    userAge: state.user.age
+    userAge: state.user.age,
+    userTopics: state.user.squareTopics
   };
 };
 
