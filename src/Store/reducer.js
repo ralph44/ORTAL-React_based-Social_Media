@@ -19,6 +19,24 @@ const initialState = {
         {title: "Title 10", text: "Text 10."},
         {title: "Title 11", text: "Text 11."},
         {title: "Title 12", text: "Text 12."},
+        ],
+      squareTopics : [
+          {name: "All", squares: [
+              {title: "Title 1", text: "All."},
+              {title: "Title 2", text: "All 2."},
+              {title: "Title 3", text: "All 3."},
+              {title: "Title 4", text: "All 4."}
+          ]}, {name: "Sports", squares: [
+              {title: "Title 1", text: "Sports."},
+              {title: "Title 2", text: "Sports 2."},
+              {title: "Title 3", text: "Sports 3."},
+              {title: "Title 4", text: "Sports 4."}
+          ]}, {name: "Family", squares: [
+              {title: "Family 1", text: "Family."},
+              {title: "Family 2", text: "Family 2."},
+              {title: "Family 3", text: "Family 3."},
+              {title: "Family 4", text: "Family 4."}
+          ]}
       ]
     }
 }

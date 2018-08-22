@@ -13,15 +13,17 @@ body {
 }
 
 .mainPageMainContent {
-    display: block;
+    display: inline-block;
     width: 100vw;
     height: 75vh;
 }
 
 .SquareSideBarParent {
     display: inline-block;
+    float: left;
 }
 
 .AlterInputComponentParent {
     display: inline-block;
+    float: left;
 }
