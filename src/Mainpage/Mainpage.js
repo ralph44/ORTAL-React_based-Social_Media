@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
 import './Mainpage.css';
 import Navbar from '../NavbarComponent/NavbarComponent.js';
 import AlterInputComponent from '../AlterInputComponent/AlterInputComponent';

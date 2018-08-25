@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import BoxComponent from '../BoxComponent/BoxComponent.js';
 import './AlterInputComponent.css';
-import UserComponent from "../Containers/UserComponent/userComponent.js";
 
 
 
