@@ -18,21 +18,57 @@
     font-weight: bold;
 }
 
-.button {
-    background-color: #a30b8b;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    width: 90%;
-    height: 5%;
-    margin: 3% 5%;
-}
-
-.button:active {
+.sideBarButton:active {
     background-color: #9f055d;
+    color: white;
 }
 
-.sideBarButton {border-radius: 8px;}
+.sideBarButton {
+    background-color: #ffffff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    outline: none;
+}
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 0px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

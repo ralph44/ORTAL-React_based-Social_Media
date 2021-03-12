@@ -64,7 +64,7 @@ class BigBoxComponent extends Component {
     };
 
     render() {
-        if (this.state.isLoading == true){
+        if (this.state.isLoading === true){
             return (
             <div className='sweet-loading'>
                 <ClipLoader
